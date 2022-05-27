@@ -247,7 +247,7 @@
 								data-endelementdelay="0.1"
 								data-endspeed="500"
 								style="z-index: 4; max-width: auto;">
-									<a class="btn btn-danger btn-lg" href="#services" target="_blank">Our Services <i class="fa fa-angle-right"></i></a>
+									<a class="btn btn-danger btn-lg" href="#services" >Our Services <i class="fa fa-angle-right"></i></a>
 									&nbsp;  &nbsp;
 									<a class="btn btn-danger btn-lg" href="quote.html" target="_blank">Get Quote  <i class="fa fa-angle-right"></i></a>
 							</div>
@@ -440,16 +440,16 @@
 
 
 			<!-- Parallax -->
-			<section class="parallax parallax-1" style="background-image: url('demo_files/images/1200x800/34-min.jpg');">
+			<section id="team" class="parallax parallax-1" style="background-image: url('demo_files/images/1200x800/34-min.jpg');">
 				<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
 
 				<div class="container">
 
 					<div class="text-center">
 						<h2 class="fs-40 fw-300">In business Since 1976</h2>
-						<a class="btn btn-primary btn-lg" href="#contact">Contact us <i class="fa fa-angle-right"></i></a>
+						<a class="btn btn-danger btn-lg" href="quote.html">Get Quote <i class="fa fa-angle-right"></i></a>
 									&nbsp; OR &nbsp;
-						<a class="btn btn-danger btn-lg" href="quote.html" target="_blank">Get Quote  <i class="fa fa-angle-right"></i></a>
+						<a class="btn btn-primary btn-lg" href="#contact" >Contact US  <i class="fa fa-angle-right"></i></a>
 					</div>
 
 				</div>
@@ -1239,10 +1239,7 @@
 												<label for="contact:name">Full Name *</label>
 												<input required type="text" value="" class="form-control" name="contact[name][required]" id="name">
 											</div>
-											<div class="col-md-4">
-												<label for="contact:name">Company Name *</label>
-												<input required type="text" value="" class="form-control" name="contact[name][required]" id="company name">
-											</div>
+											
 											<div class="col-md-4">
 												<label for="contact:email">E-mail Address *</label>
 												<input required type="email" value="" class="form-control" name="contact[email][required]" id="email">
@@ -1251,8 +1248,18 @@
 												<label for="contact:phone">Phone</label>
 												<input type="text" value="" class="form-control" name="contact[phone]" id="phone">
 											</div>
+											<div class="col-md-4">
+												<label for="contact:name">Company Name *</label>
+												<input required type="text" value="" class="form-control" name="contact[name][required]" id="company name">
+											</div>
 									</div>
 									<div class="row">
+
+									    
+											<div class="col-md-8">
+												<label for="contact:subject">Project name *</label>
+												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="subject">
+											</div>
 											<div class="col-md-8">
 												<label for="contact:subject">Project Description *</label>
 												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="subject">
