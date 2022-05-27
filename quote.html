@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Rocket Elevators - Multipurpose + Admin</title>
+		<title>Request for Quote</title>
 		<meta name="description" content="" />
 		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
 
@@ -124,22 +124,22 @@
 								-->
 								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
 									<li class="active"><!-- HOME -->
-										<a href="#home">
+										<a href="index.html">
 											HOME
 										</a>
 									</li>
 									<li><!-- SERVICES -->
-										<a href="#services">
+										<a href="index.html#services">
 											SERVICES
 										</a>
 									</li>
 									<li><!-- WORK -->
-										<a href="#work">
+										<a href="index.html#Portfolio">
 											Portofolio
 										</a>
 									</li>
 									<li><!-- NEWS -->
-										<a href="#news">
+										<a href="index.html#news">
 											NEWS
 										</a>
 									</li>
@@ -147,14 +147,14 @@
 										
 									</li>
 									<li><!-- CLIENTS -->
-										<a href="#clients">
+										<a href="index.html#clients">
 											CLIENTS
 										</a>
 									</li>
 									
 									</li>
 									<li><!-- CONTACT -->
-										<a href="#contact">
+										<a href="index.html#contact">
 											CONTACT
 										</a>
 									</li>
@@ -178,7 +178,120 @@
 			<hr class="m-0" /><!-- 1px line separator -->
 
 
-			<section id="services">
+			<section id="submission">
+				<div class="container">
+					<header class="text-center mb-60">
+						<h2>Request for a Quote</h2>
+						
+					    
+						<hr />
+					</header>
+
+
+					<div class="row">
+
+						<!-- FORM -->
+						<div class="col-md-8 col-sm-8">
+
+							<h3>Drop us a line or just say <strong><em>Hello!</em></strong></h3>
+
+							
+							
+
+							<!-- Alert Success -->
+							<div id="alert_success" class="alert alert-success mb-30">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								<strong>Thank You!</strong> Your message successfully sent!
+							</div><!-- /Alert Success -->
+
+
+							<!-- Alert Failed -->
+							<div id="alert_failed" class="alert alert-danger mb-30">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								<strong>[SMTP] Error!</strong> Internal server error!
+							</div><!-- /Alert Failed -->
+
+
+							<!-- Alert Mandatory -->
+							<div id="alert_mandatory" class="alert alert-danger mb-30">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
+							</div><!-- /Alert Mandatory -->
+
+
+							<form action="php/contact.php" method="post" enctype="multipart/form-data">
+								<fieldset>
+									<input type="hidden" name="action" value="contact_send" />
+
+									<div class="row">
+											<div class="col-md-4">
+												<label for="contact:name">Full Name *</label>
+												<input required type="text" value="" class="form-control" name="contact[name][required]" id="name">
+											</div>
+											
+											<div class="col-md-4">
+												<label for="contact:email">E-mail Address *</label>
+												<input required type="email" value="" class="form-control" name="contact[email][required]" id="email">
+											</div>
+											<div class="col-md-4">
+												<label for="contact:phone">Phone</label>
+												<input type="text" value="" class="form-control" name="contact[phone]" id="phone">
+											</div>
+											<div class="col-md-4">
+												<label for="contact:name">Company Name *</label>
+												<input required type="text" value="" class="form-control" name="contact[name][required]" id="company name">
+											</div>
+									</div>
+									<div class="row">
+
+									    
+											<div class="col-md-8">
+												<label for="contact:subject">Project name *</label>
+												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="subject">
+											</div>
+											<div class="col-md-8">
+												<label for="contact:subject">Project Description *</label>
+												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="subject">
+											</div>
+											<div class="col-md-4">
+												<label for="contact_department">Department</label>
+												<select class="form-control pointer" name="department">
+													<option value="">--- Select ---</option>
+													<option value="Marketing">Marketing</option>
+													<option value="Webdesign">Webdesign</option>
+													<option value="Architecture">Architecture</option>
+												</select>
+											</div>
+									</div>
+									<div class="row">
+											<div class="col-md-12">
+												<label for="contact:message">Message *</label>
+												<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="message"></textarea>
+											</div>
+									</div>
+									<div class="row">
+											<div class="col-md-12">
+												<label for="contact:attachment">File Attachment</label>
+
+												<!-- custom file upload -->
+												<input class="custom-file-upload" type="file" id="file" name="contact[attachment]" id="attachment" data-btn-text="Select a File" />
+												<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
+
+											</div>
+									</div>
+
+								</fieldset>
+
+								<div class="row">
+									<div class="col-md-12">
+										<button type="submit" class="btn btn-danger"><i class="fa fa-check"></i> SEND MESSAGE</button>
+									</div>
+								</div>
+							</form>
+
+						</div>
+
+				</div>
 
 			</section>
 
