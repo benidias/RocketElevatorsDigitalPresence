@@ -146,7 +146,7 @@ function price(){
      
     let standardPrice=7565.00
     let premiumPrice=12345.00
-    let exceliumPrice=15400
+    let exceliumPrice=15400.00
 
     
 
@@ -159,10 +159,10 @@ function price(){
     console.log("test is: ", test)
 
     if (test == "standard") {
-        document.getElementById("elevator-unit-price").value=standardPrice+'$';
-        document.getElementById("elevator-total-price").value=standardPrice*elevatorAmount+'$';
-        document.getElementById("installation-fees").value=(standardPrice*elevatorAmount)/10+'$';
-        document.getElementById("final-price").value=(standardPrice*elevatorAmount)+(standardPrice*elevatorAmount)/10+'$';
+        document.getElementById("elevator-unit-price").value=standardPrice.toFixed(2)+'$';
+        document.getElementById("elevator-total-price").value=(standardPrice*elevatorAmount).toFixed(2)+'$';
+        document.getElementById("installation-fees").value=((standardPrice*elevatorAmount)/10).toFixed(2)+'$';
+        document.getElementById("final-price").value=((standardPrice*elevatorAmount)+(standardPrice*elevatorAmount)/10).toFixed(2)+'$';
         console.log("standard")
     } else if (test == "premium") {
         document.getElementById("elevator-unit-price").value=premiumPrice+'$';
