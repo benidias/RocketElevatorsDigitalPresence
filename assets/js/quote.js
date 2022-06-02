@@ -68,9 +68,21 @@ function calculateResidential(){
 
     let ResidentialResultat=residentialOne/residentialTwo;
     let totalResultat=ResidentialResultat/6
+
+    
+
+    
     
     
     document.getElementById("elevator-amount").value=Math.ceil(totalResultat);
+
+    var tryIt = residentialTwo
+    console.log("floors is: ", tryIt)
+    if(tryIt > 20){
+        document.getElementById("elevator-amount").value=Math.ceil(ResidentialResultat/20)+Math.ceil(totalResultat);
+
+        
+    }
 
     
    
@@ -147,21 +159,21 @@ function price(){
     console.log("test is: ", test)
 
     if (test == "standard") {
-        document.getElementById("elevator-unit-price").value=standardPrice;
-        document.getElementById("elevator-total-price").value=standardPrice*elevatorAmount;
-        document.getElementById("installation-fees").value=(standardPrice*elevatorAmount)/10;
-        document.getElementById("final-price").value=(standardPrice*elevatorAmount)+(standardPrice*elevatorAmount)/10;
+        document.getElementById("elevator-unit-price").value=standardPrice+'$';
+        document.getElementById("elevator-total-price").value=standardPrice*elevatorAmount+'$';
+        document.getElementById("installation-fees").value=(standardPrice*elevatorAmount)/10+'$';
+        document.getElementById("final-price").value=(standardPrice*elevatorAmount)+(standardPrice*elevatorAmount)/10+'$';
         console.log("standard")
     } else if (test == "premium") {
-        document.getElementById("elevator-unit-price").value=premiumPrice;
-        document.getElementById("elevator-total-price").value=premiumPrice*elevatorAmount;
+        document.getElementById("elevator-unit-price").value=premiumPrice+'$';
+        document.getElementById("elevator-total-price").value=premiumPrice*elevatorAmount+'$';
         document.getElementById("installation-fees").value=(premiumPrice*elevatorAmount)/10;
-        document.getElementById("final-price").value=(premiumPrice*elevatorAmount)+(premiumPrice*elevatorAmount)/10;
+        document.getElementById("final-price").value=(premiumPrice*elevatorAmount)+(premiumPrice*elevatorAmount)/10+'$';
         console.log("premium")
     } else {
-        document.getElementById("elevator-unit-price").value=exceliumPrice;
-        document.getElementById("elevator-total-price").value=exceliumPrice*elevatorAmount;
-        document.getElementById("installation-fees").value=(exceliumPrice*elevatorAmount)/10;
+        document.getElementById("elevator-unit-price").value=exceliumPrice+'$';
+        document.getElementById("elevator-total-price").value=exceliumPrice*elevatorAmount+'$';
+        document.getElementById("installation-fees").value=(exceliumPrice*elevatorAmount)/10+'$';
         // document.getElementById("final-price").value=(exceliumPrice*elevatorAmount)+(exceliumPrice*elevatorAmount)/10;
         document.getElementById("final-price").value=5;
         // $("#final-price").val(50)
