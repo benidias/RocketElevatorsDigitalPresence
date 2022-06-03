@@ -66,22 +66,27 @@ function calculateResidential(){
     var residentialOne =document.getElementById("residentialOne").value;
     var residentialTwo =document.getElementById("residentialTwo").value;
 
-    let ResidentialResultat=residentialOne/residentialTwo;
-    let totalResultat=ResidentialResultat/6
+    let residentialResultat=residentialOne/residentialTwo;
+    let totalResultat=Math.ceil(residentialResultat/6);
+
+    let columnNbr=Math.ceil(residentialTwo/20);
 
     
 
     
     
     
-    document.getElementById("elevator-amount").value=Math.ceil(totalResultat);
+    
 
     var tryIt = residentialTwo
     console.log("floors is: ", tryIt)
     if(tryIt > 20){
-        document.getElementById("elevator-amount").value=Math.ceil(ResidentialResultat/20)+Math.ceil(totalResultat);
+        document.getElementById("elevator-amount").value=Math.ceil(totalResultat)*Math.ceil(columnNbr);
+        console.log("residential")
 
         
+    } else if(tryIt<=20){
+        document.getElementById("elevator-amount").value=Math.ceil(totalResultat);
     }
 
     
@@ -90,21 +95,32 @@ function calculateResidential(){
 
 
 function calculateCorporate(){
+    console.log(calculateCorporate)
     
     var corporateMine=document.getElementById("corporateMine").value;
     var corporateYou=document.getElementById("corporateYou").value;
+    console.log("corporateYou")
     var corporateHim=document.getElementById("corporateHim").value;
+    console.log("corporateHim")
     var corporateHer=document.getElementById("corporateHer").value;
     var corporateUs=document.getElementById("corporateUs").value;
+    console.log("corporate us")
 
-    let sumOfFloor=corporateYou+corporateHim;
-    let TotalOccupants=corporateUs*sumOfFloor;
-    let NumberOfElevators=Math.ceil(TotalOccupants/1000);
-    let NumberOfElevatorColumn=Math.ceil(sumOfFloor/20);
-    let AverageNumberOfElevatorsPerColumn=NumberOfElevators/NumberOfElevatorColumn;
-    let totalResult=AverageNumberOfElevatorsPerColumn*NumberOfElevatorColumn;
+    let sumOfFloor=(+corporateYou)+(+corporateHim);
+    console.log("corporateYou+corporateHim")
+    let totalOccupants=corporateUs*sumOfFloor;
+    console.log("corporateUs*sumofFloor")
+    let numberOfElevators=Math.ceil(totalOccupants/1000);
+    console.log("totaloccupants/1000")
+    let numberOfElevatorColumn=Math.ceil(sumOfFloor/20);
+    console.log("sumofFloor/20")
+    let averageNumberOfElevatorsPerColumn=Math.ceil(numberOfElevators/numberOfElevatorColumn);
+    console.log("numberofelevators/numberofelevatorcolumn")
+    let totalResult=Math.ceil(averageNumberOfElevatorsPerColumn*numberOfElevatorColumn);
+    console.log("averageNumberofelevatorspercolumn*numberofelevatorcolumn")
 
-    document.getElementById("elevator-amount").value=Math.ceil(totalResult);
+    document.getElementById("elevator-amount").value=Math.ceil(averageNumberOfElevatorsPerColumn*numberOfElevatorColumn);
+    console.log("elevatoramount")
 
     
 }
@@ -117,12 +133,12 @@ function calculateHybrid(){
     var hybridYour=document.getElementById("hybridYour").value;
     var hybridThere=document.getElementById("hybridThere").value;
 
-    let sumOfFloors=hybridHis+hybridIts;
+    let sumOfFloors=(+hybridHis)+(+hybridIts);
     let totalOccupants=hybridYour*sumOfFloors;
     let numberOfElevators=Math.ceil(totalOccupants/1000);
     let numberOfElevatorsColumn=Math.ceil(sumOfFloors/20);
-    let averageNumberOfElevatorsPerColumn=numberOfElevators/numberOfElevatorsColumn;
-    let totalResult=averageNumberOfElevatorsPerColumn*numberOfElevatorsColumn;
+    let averageNumberOfElevatorsPerColumn=Math.ceil(numberOfElevators/numberOfElevatorsColumn);
+    let totalResult=Math.ceil(averageNumberOfElevatorsPerColumn*numberOfElevatorsColumn);
 
 
     document.getElementById("elevator-amount").value=Math.ceil(totalResult);
