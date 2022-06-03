@@ -181,17 +181,17 @@ function price(){
         document.getElementById("final-price").value=((standardPrice*elevatorAmount)+(standardPrice*elevatorAmount)/10).toFixed(2)+'$';
         console.log("standard")
     } else if (test == "premium") {
-        document.getElementById("elevator-unit-price").value=premiumPrice+'$';
-        document.getElementById("elevator-total-price").value=premiumPrice*elevatorAmount+'$';
-        document.getElementById("installation-fees").value=(premiumPrice*elevatorAmount)/10;
-        document.getElementById("final-price").value=(premiumPrice*elevatorAmount)+(premiumPrice*elevatorAmount)/10+'$';
+        document.getElementById("elevator-unit-price").value=premiumPrice.toFixed(2)+'$';
+        document.getElementById("elevator-total-price").value=(premiumPrice*elevatorAmount).toFixed(2)+'$';
+        document.getElementById("installation-fees").value=((premiumPrice*elevatorAmount)*0.13).toFixed(2)+'$';
+        document.getElementById("final-price").value=((premiumPrice*elevatorAmount)+(premiumPrice*elevatorAmount)*0.13).toFixed(2)+'$';
         console.log("premium")
     } else {
-        document.getElementById("elevator-unit-price").value=exceliumPrice+'$';
-        document.getElementById("elevator-total-price").value=exceliumPrice*elevatorAmount+'$';
-        document.getElementById("installation-fees").value=(exceliumPrice*elevatorAmount)/10+'$';
+        document.getElementById("elevator-unit-price").value=exceliumPrice.toFixed(2)+'$';
+        document.getElementById("elevator-total-price").value=(exceliumPrice*elevatorAmount).toFixed(2)+'$';
+        document.getElementById("installation-fees").value=((exceliumPrice*elevatorAmount)*0.16).toFixed(2)+'$';
         // document.getElementById("final-price").value=(exceliumPrice*elevatorAmount)+(exceliumPrice*elevatorAmount)/10;
-        document.getElementById("final-price").value=5;
+        document.getElementById("final-price").value=((exceliumPrice*elevatorAmount)+(exceliumPrice*elevatorAmount)*0.16).toFixed(2)+'$';
         // $("#final-price").val(50)
         console.log("excelium")
     }
