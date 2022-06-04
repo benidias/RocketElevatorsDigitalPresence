@@ -147,6 +147,9 @@ function calculateHybrid(){
 }
 
 
+function formatNumber(number) {
+    return new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD', minimumFractionDigits: 2}).format(number)
+}
 
 function price(){
     console.log("test")
@@ -156,13 +159,26 @@ function price(){
     var elevatorAmount=document.getElementById("elevator-amount").value;
     var elevatorTotalPrice=document.getElementById("elevator-total-price").value;
 
+    // var standardFixed= 7565.00.toFixed(2)
+    // var premiumFixed= 12345.00.toFixed(2)
+    // var exceliumFixed= 15400.00.toFixed(2)
+
      
     
    
      
-    let standardPrice=7565.00
-    let premiumPrice=12345.00
-    let exceliumPrice=15400.00
+    // let standardPrice= new Intl.NumberFormat('en-US').format(standardFixed)
+    // console.log('standardPrice')
+    // let premiumPrice= new Intl.NumberFormat('en-US').format(premiumFixed)
+    // console.log('premiumPrice')
+    // let exceliumPrice= new Intl.NumberFormat('en-US').format(exceliumFixed)
+    // console.log('exceliumPrice')
+
+    let standardPrice = 7565;
+    let premiumPrice = 12345;
+    let exceliumPrice = 15400;
+
+
 
     
 
@@ -175,23 +191,23 @@ function price(){
     console.log("test is: ", test)
 
     if (test == "standard") {
-        document.getElementById("elevator-unit-price").value=standardPrice.toFixed(2)+'$';
-        document.getElementById("elevator-total-price").value=(standardPrice*elevatorAmount).toFixed(2)+'$';
-        document.getElementById("installation-fees").value=((standardPrice*elevatorAmount)/10).toFixed(2)+'$';
-        document.getElementById("final-price").value=((standardPrice*elevatorAmount)+(standardPrice*elevatorAmount)/10).toFixed(2)+'$';
+        document.getElementById("elevator-unit-price").value=formatNumber(standardPrice);
+        document.getElementById("elevator-total-price").value=formatNumber(standardPrice*elevatorAmount);
+        document.getElementById("installation-fees").value=formatNumber((standardPrice*elevatorAmount)/10);
+        document.getElementById("final-price").value=formatNumber((standardPrice*elevatorAmount)+(standardPrice*elevatorAmount)/10);
         console.log("standard")
     } else if (test == "premium") {
-        document.getElementById("elevator-unit-price").value=premiumPrice.toFixed(2)+'$';
-        document.getElementById("elevator-total-price").value=(premiumPrice*elevatorAmount).toFixed(2)+'$';
-        document.getElementById("installation-fees").value=((premiumPrice*elevatorAmount)*0.13).toFixed(2)+'$';
-        document.getElementById("final-price").value=((premiumPrice*elevatorAmount)+(premiumPrice*elevatorAmount)*0.13).toFixed(2)+'$';
+        document.getElementById("elevator-unit-price").value=formatNumber(premiumPrice);
+        document.getElementById("elevator-total-price").value=formatNumber(premiumPrice*elevatorAmount);
+        document.getElementById("installation-fees").value=formatNumber((premiumPrice*elevatorAmount)*0.13);
+        document.getElementById("final-price").value=formatNumber((premiumPrice*elevatorAmount)+(premiumPrice*elevatorAmount)*0.13);
         console.log("premium")
     } else {
-        document.getElementById("elevator-unit-price").value=exceliumPrice.toFixed(2)+'$';
-        document.getElementById("elevator-total-price").value=(exceliumPrice*elevatorAmount).toFixed(2)+'$';
-        document.getElementById("installation-fees").value=((exceliumPrice*elevatorAmount)*0.16).toFixed(2)+'$';
+        document.getElementById("elevator-unit-price").value=formatNumber(exceliumPrice);
+        document.getElementById("elevator-total-price").value=formatNumber(exceliumPrice*elevatorAmount);
+        document.getElementById("installation-fees").value=formatNumber((exceliumPrice*elevatorAmount)*0.16);
         // document.getElementById("final-price").value=(exceliumPrice*elevatorAmount)+(exceliumPrice*elevatorAmount)/10;
-        document.getElementById("final-price").value=((exceliumPrice*elevatorAmount)+(exceliumPrice*elevatorAmount)*0.16).toFixed(2)+'$';
+        document.getElementById("final-price").value=formatNumber((exceliumPrice*elevatorAmount)+(exceliumPrice*elevatorAmount)*0.16);
         // $("#final-price").val(50)
         console.log("excelium")
     }
