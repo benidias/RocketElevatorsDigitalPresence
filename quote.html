@@ -227,84 +227,84 @@
 											<div   class="row BuildNumber">
 												<div id="number-of-apartments" class="col-md-4 col-sm-6 mix residential" class="residential box">
 													<label>The number of apartments in the building:</label>
-													<input type="number" id="residentialOne" name="" value="" onchange="calculateResidential()">
+													<input type="number" max="10000" id="residentialOne" name="" value="" onkeyup="calculateResidential()">
 												</div>
 												<div id="number-of-floors" class="col-md-4 col-sm-6 mix residential" class="residential box">
 													<label>The number of floors contained in the building:</label>
-													<input type="number" id="residentialTwo" name="floors" value="" onchange="calculateResidential()" name="">
+													<input type="number" max="10000" id="residentialTwo" name="floors" value="" onkeyup="calculateResidential()" name="">
 												</div>
 												<div id="number-of-basements" class="col-md-4 col-sm-6 mix residential" class="residential box">
 													<label>The number of basements contained in the building:</label>
-													<input type="number" id="residentialThree" onchange="calculateResidential()" name="">
+													<input type="number" max="10000" id="residentialThree" onkeyup="calculateResidential()" name="">
 												</div>
 											</div>
 											<div class="row BuildNumber">
 												<div id="number-of-companies" class="col-md-4 col-sm-6 mix commercial" class="Commercial box">
 													<label>The number of distinct businesses:</label>
-													<input type="number" id="Number-of-Distinct-Businesses" name="" value="" onchange="calculateCommercial()">
+													<input type="number" max="10000" id="Number-of-Distinct-Businesses" name="" value="" onkeyup="calculateCommercial()">
 												</div>
 												<div id="number-of-floors" class="col-md-4 col-sm-6 mix commercial" class="commercial box">
 													<label>The number of floors contained in the building, excluding basement:</label>
-													<input type="number" id="Number-of-Floors" value="" onchange="calculateCommercial()" value="" name="">
+													<input type="number" max="10000" id="Number-of-Floors" value="" onkeyup="calculateCommercial()" value="" name="">
 												</div>
 												<div id="number-of-basements" class="col-md-4 col-sm-6 mix commercial" class="commercial box">
 													<label>The number of basements contained in the building:</label>
-													<input type="number" id="Number-Of-Basement" onchange="calculateCommercial()" value="" name="">
+													<input type="number" max="10000" id="Number-Of-Basement" onkeyup="calculateCommercial()" value="" name="">
 												</div>
 												<div id="number-of-parking-spot" class="col-md-4 col-sm-6 mix commercial" class="commercial box">
 													<label>The number of parking spaces available:</label>
-													<input type="number" id="Number-Of-Parking-Space" onchange="calculateCommercial()" value="" name="">
+													<input type="number" max="10000" id="Number-Of-Parking-Space" onkeyup="calculateCommercial()" value="" name="">
 												</div>
 												<div id="number-of-elevators" class="col-md-4 col-sm-6 mix commercial" class="commercial box">
 													<label>The number of elevator cages to be desired:</label>
-													<input type="number" id="Number-Of-Elevator" onchange="calculateCommercial()" value="" name="">
+													<input type="number" max="10000" id="Number-Of-Elevator" onkeyup="calculateCommercial()" value="" name="">
 												</div>
 											</div>
 											<div  class="row BuildNumber">
 												<div id="number-of-corporations" class="col-md-4 col-sm-6 mix corporate" class="corporate box">
 													<label>The number of separate tenant companies:</label>
-													<input type="number" id="corporateMine" name="" value="" onchange="calculateCorporate()">
+													<input type="number"  max="10000" id="corporateMine" name="" value="" onkeyup="calculateCorporate()">
 												</div>
 												<div id="number-of-floors" class="col-md-4 col-sm-6 mix corporate" class="corporate box">
 													<label>The number of floors contained in the building, excluding basement:</label>
-													<input type="number" id="corporateYou" value="" onchange="calculateCorporate()" name="">
+													<input type="number"  max="10000" id="corporateYou" value="" onkeyup="calculateCorporate()" name="">
 												</div>
 												<div id="number-of-basements" class="col-md-4 col-sm-6 mix corporate" class="corporate box">
 													<label>The number of basements contained in the building:</label>
-													<input type="number" id="corporateHim" onchange="calculateCorporate()" name="">
+													<input type="number"  max="10000" id="corporateHim" onkeyup="calculateCorporate()" name="">
 												</div>
 												<div id="number-of-parking-spots" class="col-md-4 col-sm-6 mix corporate" class="corporate box">
 													<label>The number of parking spaces available:</label>
-													<input type="number" id="corporateHer" onchange="calculateCorporate()" name="">
+													<input type="number"  max="10000" id="corporateHer" onkeyup="calculateCorporate()" name="">
 												</div>
 												<div id="maximum-occupancy" class="col-md-4 col-sm-6 mix corporate" class="corporate box">
 													<label>The number of occupants per floor:</label>
-													<input type="number" id="corporateUs" onchange="calculateCorporate()" name="">
+													<input type="number"  max="10000" id="corporateUs" onkeyup="calculateCorporate()" name="">
 												</div>
 												<div  class="row BuildNumber">
 												<div id="number-of-companies" class="col-md-4 col-sm-6 mix hybrid" class="hybrid box">
 													<label>The number of distinct businesses:</label>
-													<input type="number" id="hybridMy" name="" value="" onchange="calculateHybrid()">
+													<input type="number" max="10000" id="hybridMy" name="" value="" onkeyup="calculateHybrid()">
 												</div>
 												<div id="number-of-floors" class="col-md-4 col-sm-6 mix hybrid" class="hybrid box">
 													<label>The number of floors contained in the building, excluding basements:</label>
-													<input type="number" id="hybridHis" value="" onchange="calculateHybrid()" name="">
+													<input type="number" max="10000" id="hybridHis" value="" onkeyup="calculateHybrid()" name="">
 												</div>
 												<div id="number-of-basements" class="col-md-4 col-sm-6 mix hybrid" class="hybrid box box">
 													<label>The number of basements contained in the building:</label>
-													<input type="number" id="hybridIts" onchange="calculateHybrid()" name="">
+													<input type="number" max="10000" id="hybridIts" onkeyup="calculateHybrid()" name="">
 												</div>
 												<div id="number-of-parking-spots" class="col-md-4 col-sm-6 mix hybrid" class="hybrid box">
 													<label>The number of parking spaces available:</label>
-													<input type="number" id="hybridWe" onchange="calculateHybrid()" name="">
+													<input type="number" max="10000" id="hybridWe" onkeyup="calculateHybrid()" name="">
 												</div>
 												<div id="maximum-occupancy" class="col-md-4 col-sm-6 mix hybrid" class="hybrid box">
 													<label>The maximum number of occupants per floor:</label>
-													<input type="number" id="hybridYour" onchange="calculateHybrid()" name="">
+													<input type="number" max="10000" id="hybridYour" onkeyup="calculateHybrid()" name="">
 												</div>
 												<div id="business-hours" class="col-md-4 col-sm-6 mix hybrid" class="hybrid box">
 													<label>The maximum number of hours of activity per day:</label>
-													<input type="number" id="hybridThere" onchange="calculateHybrid()" name="">
+													<input type="number" max="10000" id="hybridThere" onkeyup="calculateHybrid()" name="">
 												</div>
 											</div>
 											<div class="col-md-4">
@@ -430,9 +430,9 @@
 				<div class="copyright">
 					<div class="container">
 						<ul class="float-right m-0 list-inline mobile-block">
-							<li><a href="#">Terms &amp; Conditions</a></li>
+							<li><a>Terms &amp; Conditions</a></li>
 							<li>&bull;</li>
-							<li><a href="#">Privacy</a></li>
+							<li><a>Privacy</a></li>
 						</ul>
 						&copy; All Rights Reserved, Company LTD
 					</div>

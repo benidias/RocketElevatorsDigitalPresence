@@ -159,20 +159,7 @@ function price(){
     var elevatorAmount=document.getElementById("elevator-amount").value;
     var elevatorTotalPrice=document.getElementById("elevator-total-price").value;
 
-    // var standardFixed= 7565.00.toFixed(2)
-    // var premiumFixed= 12345.00.toFixed(2)
-    // var exceliumFixed= 15400.00.toFixed(2)
-
-     
     
-   
-     
-    // let standardPrice= new Intl.NumberFormat('en-US').format(standardFixed)
-    // console.log('standardPrice')
-    // let premiumPrice= new Intl.NumberFormat('en-US').format(premiumFixed)
-    // console.log('premiumPrice')
-    // let exceliumPrice= new Intl.NumberFormat('en-US').format(exceliumFixed)
-    // console.log('exceliumPrice')
 
     let standardPrice = 7565;
     let premiumPrice = 12345;
@@ -206,9 +193,9 @@ function price(){
         document.getElementById("elevator-unit-price").value=formatNumber(exceliumPrice);
         document.getElementById("elevator-total-price").value=formatNumber(exceliumPrice*elevatorAmount);
         document.getElementById("installation-fees").value=formatNumber((exceliumPrice*elevatorAmount)*0.16);
-        // document.getElementById("final-price").value=(exceliumPrice*elevatorAmount)+(exceliumPrice*elevatorAmount)/10;
+        
         document.getElementById("final-price").value=formatNumber((exceliumPrice*elevatorAmount)+(exceliumPrice*elevatorAmount)*0.16);
-        // $("#final-price").val(50)
+        
         console.log("excelium")
     }
     
